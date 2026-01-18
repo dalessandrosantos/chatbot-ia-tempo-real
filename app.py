@@ -30,5 +30,5 @@ if __name__ == "__main__":
     # render (e outros serviços) passam a porta pela variável de ambiente PORT
     port = int(os.environ.get("PORT", 5000))
     # 0.0.0.0 permite conexões externas
-    socketio.run(app, host="0.0.0.0", port=port)
+    socketio.run(app, host="0.0.0.0", port=port, allow_unsafe_werkzeug=True)
 
